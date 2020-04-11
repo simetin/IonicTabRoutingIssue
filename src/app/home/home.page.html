@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1><strong>All posts (option 1):</strong></h1>
+
+  <div *ngFor="let post of posts" class="post" (click)="viewPostOp1(post)" tappable>
+    <h2>This is post  {{ post }}</h2>
+  </div>
+
+  <h1><strong>All posts (option 2):</strong></h1>
+  
+  <div *ngFor="let post of posts" class="post" (click)="viewPostOp2(post)" tappable>
+    <h2>This is post  {{ post }}</h2>
+  </div>
+
+</ion-content>
